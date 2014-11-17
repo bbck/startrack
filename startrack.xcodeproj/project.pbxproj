@@ -176,7 +176,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83A43CB41A1072FB00809B3B /* Build configuration list for PBXProject "startrack" */;
+			buildConfigurationList = 83A43CB41A1072FB00809B3B /* Build configuration list for PBXProject "StarTrack" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -401,7 +401,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		83A43CB41A1072FB00809B3B /* Build configuration list for PBXProject "startrack" */ = {
+		83A43CB41A1072FB00809B3B /* Build configuration list for PBXProject "StarTrack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83A43CDA1A1072FB00809B3B /* Debug */,
