@@ -10,7 +10,9 @@
 
 @interface ViewController ()
 {
-    NSArray *_targetPickerData;
+    NSArray *targetPickerData;
+    NSString *targetPlist;
+    NSDictionary *targetCoordinates;
 }
 @end
 
@@ -19,7 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _targetPickerData = @[@"", @"Zero", @"North", @"South", @"East", @"West"];
+    targetPickerData = @[@"Zero", @"North", @"South", @"East", @"West"];
+    targetPlist = [[NSBundle mainBundle] pathForResource:@"Targets"
+                                                  ofType:@"plist"];
+    targetCoordinates = [NSDictionary dictionaryWithContentsOfFile:targetPlist];
     self.targetPicker.dataSource = self;
     self.targetPicker.delegate = self;
 }
@@ -34,12 +39,19 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return _targetPickerData.count;
+    return targetPickerData.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return _targetPickerData[row];
+    return targetPickerData[row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    NSLog(@"Selected row: %ld", (long)row);
+    NSArray *coordinates = [targetCoordinates objectForKey:targetPickerData[row]];
+    NSLog(@"Right ascension = %@", coordinates[0]);
+    NSLog(@"Declination = %@", coordinates[0]);
 }
 
 @end

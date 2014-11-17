@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832F567C1A1A5151009974E6 /* Targets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 832F567B1A1A5151009974E6 /* Targets.plist */; };
 		83A43CBF1A1072FB00809B3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A43CBE1A1072FB00809B3B /* main.m */; };
 		83A43CC21A1072FB00809B3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A43CC11A1072FB00809B3B /* AppDelegate.m */; };
 		83A43CC51A1072FB00809B3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A43CC41A1072FB00809B3B /* ViewController.m */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		832F567B1A1A5151009974E6 /* Targets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Targets.plist; path = StarTrack/Targets.plist; sourceTree = SOURCE_ROOT; };
 		83A43CB91A1072FB00809B3B /* startrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = startrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A43CBD1A1072FB00809B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A43CBE1A1072FB00809B3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,9 +62,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		832F567D1A1A538F009974E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				832F567B1A1A5151009974E6 /* Targets.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		83A43CB01A1072FB00809B3B = {
 			isa = PBXGroup;
 			children = (
+				832F567D1A1A538F009974E6 /* Resources */,
 				83A43CBB1A1072FB00809B3B /* startrack */,
 				83A43CD51A1072FB00809B3B /* startrackTests */,
 				83A43CBA1A1072FB00809B3B /* Products */,
@@ -201,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A43CC81A1072FB00809B3B /* Main.storyboard in Resources */,
+				832F567C1A1A5151009974E6 /* Targets.plist in Resources */,
 				83A43CCD1A1072FB00809B3B /* LaunchScreen.xib in Resources */,
 				83A43CCA1A1072FB00809B3B /* Images.xcassets in Resources */,
 			);
