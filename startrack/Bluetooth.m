@@ -57,7 +57,22 @@
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
     for (CBCharacteristic *characteristic in service.characteristics) {
         NSLog(@"Discovered characteristic %@", characteristic);
+        if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:@"46010CB0-8FC5-43B1-9FF8-0C65E88DCF34"]]) {
+            _characteristic = characteristic;
+        }
     }
+}
+
+- (void)peripheral:(CBPeripheral *)peripheral didWriteValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    if (error == nil) {
+        NSLog(@"Wrote value");
+    } else {
+        NSLog(@"%@", error);
+    }
+}
+
+- (void)transmitData:(NSData *)data {
+    [_peripheral writeValue:data forCharacteristic:_characteristic type:CBCharacteristicWriteWithResponse];
 }
 
 @end

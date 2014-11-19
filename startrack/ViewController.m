@@ -21,7 +21,11 @@
 }
 
 - (IBAction)startTracking:(id)sender {
+    NSDictionary *params = @{ @"rightAscension" : _rightAscension.text, @"declination" : _declination.text, @"exposureLength" : _exposureLength.text, @"exposureCount" : _exposureCount.text};
     
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:params];
+    
+    [_bt transmitData:data];
 }
 
 @end

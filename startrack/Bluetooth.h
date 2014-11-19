@@ -13,5 +13,8 @@
 
 @property (strong, nonatomic) CBCentralManager *myCentralManager;
 @property (strong, nonatomic) CBPeripheral *peripheral;
+@property (strong, nonatomic) CBCharacteristic *characteristic;
+
+- (void)transmitData:(NSData *)data;
 
 @end
