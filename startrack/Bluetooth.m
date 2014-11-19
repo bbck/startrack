@@ -30,7 +30,7 @@
     NSLog(@"centralManagerDidUpdateState");
     switch (self.myCentralManager.state) {
         case CBCentralManagerStatePoweredOn:
-            [self.myCentralManager scanForPeripheralsWithServices:nil options:nil];
+            [self.myCentralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString: @"46010CB0-8FC5-43B1-9FF8-0C65E88DCF34"]] options:nil];
             break;
             
         case CBCentralManagerStatePoweredOff:
