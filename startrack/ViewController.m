@@ -27,6 +27,8 @@
     targetCoordinates = [NSDictionary dictionaryWithContentsOfFile:targetPlist];
     self.targetPicker.dataSource = self;
     self.targetPicker.delegate = self;
+    
+    self.bluetooth = [[Bluetooth alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {

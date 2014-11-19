@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Bluetooth.h"
 
 @interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIPickerView *targetPicker;
+@property (strong, nonatomic) Bluetooth *bluetooth;
 
 @end
 
