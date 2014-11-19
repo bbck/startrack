@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "Bluetooth.h"
 
-@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIPickerView *targetPicker;
 @property (strong, nonatomic) Bluetooth *bluetooth;
+@property (weak, nonatomic) IBOutlet UITextField *rightAscension;
+@property (weak, nonatomic) IBOutlet UITextField *declination;
+@property (weak, nonatomic) IBOutlet UITextField *exposureLength;
+@property (weak, nonatomic) IBOutlet UITextField *exposureCount;
 
 @end
 

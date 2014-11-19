@@ -21,13 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    targetPickerData = @[@"Zero", @"North", @"South", @"East", @"West"];
-    targetPlist = [[NSBundle mainBundle] pathForResource:@"Targets"
-                                                  ofType:@"plist"];
-    targetCoordinates = [NSDictionary dictionaryWithContentsOfFile:targetPlist];
-    self.targetPicker.dataSource = self;
-    self.targetPicker.delegate = self;
-    
     self.bluetooth = [[Bluetooth alloc] init];
 }
 
@@ -36,24 +29,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 1;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    return targetPickerData.count;
-}
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return targetPickerData[row];
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    NSLog(@"Selected row: %ld", (long)row);
-    NSArray *coordinates = [targetCoordinates objectForKey:targetPickerData[row]];
-    NSLog(@"Right ascension = %@", coordinates[0]);
-    NSLog(@"Declination = %@", coordinates[0]);
+- (IBAction)startTracking:(id)sender {
+    
 }
 
 @end
