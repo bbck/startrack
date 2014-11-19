@@ -11,7 +11,7 @@
 
 @interface ViewController : UIViewController
 
-@property (strong, nonatomic) Bluetooth *bluetooth;
+@property (strong, nonatomic) Bluetooth *bt;
 @property (weak, nonatomic) IBOutlet UITextField *rightAscension;
 @property (weak, nonatomic) IBOutlet UITextField *declination;
 @property (weak, nonatomic) IBOutlet UITextField *exposureLength;
