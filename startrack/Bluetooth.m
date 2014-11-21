@@ -71,8 +71,4 @@
     }
 }
 
-- (void)transmitData:(NSData *)data {
-    [_peripheral writeValue:data forCharacteristic:_characteristic type:CBCharacteristicWriteWithResponse];
-}
-
 @end

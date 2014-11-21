@@ -25,7 +25,7 @@
     
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:params];
     
-    [_bt transmitData:data];
+    [_bt.peripheral writeValue:data forCharacteristic:_bt.characteristic type:CBCharacteristicWriteWithResponse];
 }
 
 @end
