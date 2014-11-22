@@ -12,6 +12,8 @@
 
 - (id)init
 {
+    self = [super init];
+    
     _myCentralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:nil];
     return self;
 }
@@ -69,6 +71,12 @@
     } else {
         NSLog(@"%@", error);
     }
+}
+
+- (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
+    _characteristic = nil;
+    _peripheral = nil;
+    [_myCentralManager scanForPeripheralsWithServices:@[[CBUUID UUIDWithString: @"46010CB0-8FC5-43B1-9FF8-0C65E88DCF34"]] options:nil];
 }
 
 @end
