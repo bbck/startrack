@@ -185,6 +185,11 @@
 					83A43CB81A1072FB00809B3B = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = Y6JY4Y23L4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					83A43CD11A1072FB00809B3B = {
 						CreatedOnToolsVersion = 6.1;
