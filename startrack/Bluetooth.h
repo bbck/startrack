@@ -15,4 +15,6 @@
 @property (strong, nonatomic) CBPeripheral *peripheral;
 @property (strong, nonatomic) CBCharacteristic *characteristic;
 
++ (id) sharedInstance;
+
 @end

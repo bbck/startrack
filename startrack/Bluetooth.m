@@ -10,6 +10,16 @@
 
 @implementation Bluetooth
 
++ (Bluetooth*)sharedInstance
+{
+    static Bluetooth *this = nil;
+    
+    if (!this) {
+        this = [[Bluetooth alloc] init];
+    }
+    return this;
+}
+
 - (id)init
 {
     self = [super init];

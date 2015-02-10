@@ -13,7 +13,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _bt = [[Bluetooth alloc] init];
+    _bt = [Bluetooth sharedInstance];
 }
 
 - (void)didReceiveMemoryWarning {
