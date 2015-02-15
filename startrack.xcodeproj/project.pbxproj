@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		832F567C1A1A5151009974E6 /* Targets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 832F567B1A1A5151009974E6 /* Targets.plist */; };
+		8347DEE81A902A220064ED6E /* DevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8347DEE71A902A220064ED6E /* DevicesViewController.m */; };
 		83A43CBF1A1072FB00809B3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A43CBE1A1072FB00809B3B /* main.m */; };
 		83A43CC21A1072FB00809B3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A43CC11A1072FB00809B3B /* AppDelegate.m */; };
 		83A43CC51A1072FB00809B3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A43CC41A1072FB00809B3B /* ViewController.m */; };
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		832F567B1A1A5151009974E6 /* Targets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Targets.plist; path = StarTrack/Targets.plist; sourceTree = SOURCE_ROOT; };
+		8347DEE61A902A220064ED6E /* DevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DevicesViewController.h; path = StarTrack/DevicesViewController.h; sourceTree = SOURCE_ROOT; };
+		8347DEE71A902A220064ED6E /* DevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DevicesViewController.m; path = StarTrack/DevicesViewController.m; sourceTree = SOURCE_ROOT; };
 		83A43CB91A1072FB00809B3B /* startrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = startrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A43CBD1A1072FB00809B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A43CBE1A1072FB00809B3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				83A43CC11A1072FB00809B3B /* AppDelegate.m */,
 				83A43CC31A1072FB00809B3B /* ViewController.h */,
 				83A43CC41A1072FB00809B3B /* ViewController.m */,
+				8347DEE61A902A220064ED6E /* DevicesViewController.h */,
+				8347DEE71A902A220064ED6E /* DevicesViewController.m */,
 				83A43CC61A1072FB00809B3B /* Main.storyboard */,
 				83A43CC91A1072FB00809B3B /* Images.xcassets */,
 				83A43CCB1A1072FB00809B3B /* LaunchScreen.xib */,
@@ -237,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8347DEE81A902A220064ED6E /* DevicesViewController.m in Sources */,
 				83A43CC51A1072FB00809B3B /* ViewController.m in Sources */,
 				83A43CC21A1072FB00809B3B /* AppDelegate.m in Sources */,
 				83A43CBF1A1072FB00809B3B /* main.m in Sources */,
