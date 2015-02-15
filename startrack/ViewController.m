@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  startrack
+//  StarTrack
 //
 //  Created by Chris Boyle on 11/9/14.
 //  Copyright (c) 2014 UMass Amherst. All rights reserved.
@@ -8,24 +8,30 @@
 
 #import "ViewController.h"
 
+@interface ViewController ()
+
+@end
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    _bt = [Bluetooth sharedInstance];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)startTracking:(id)sender {
-    NSDictionary *params = @{ @"rightAscension" : _rightAscension.text, @"declination" : _declination.text, @"exposureLength" : _exposureLength.text, @"exposureCount" : _exposureCount.text};
-    
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:params];
-    
-    [_bt.peripheral writeValue:data forCharacteristic:_bt.characteristic type:CBCharacteristicWriteWithResponse];
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
+*/
 
 @end
