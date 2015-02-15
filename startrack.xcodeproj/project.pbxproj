@@ -15,7 +15,6 @@
 		83A43CCA1A1072FB00809B3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A43CC91A1072FB00809B3B /* Images.xcassets */; };
 		83A43CCD1A1072FB00809B3B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A43CCB1A1072FB00809B3B /* LaunchScreen.xib */; };
 		83A43CD91A1072FB00809B3B /* startrackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A43CD81A1072FB00809B3B /* startrackTests.m */; };
-		83C45CBD1A1B1BAB0012A3E5 /* Bluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C45CBC1A1B1BAB0012A3E5 /* Bluetooth.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +42,6 @@
 		83A43CD21A1072FB00809B3B /* startrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = startrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A43CD71A1072FB00809B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A43CD81A1072FB00809B3B /* startrackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = startrackTests.m; sourceTree = "<group>"; };
-		83C45CBB1A1B1BAB0012A3E5 /* Bluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bluetooth.h; path = StarTrack/Bluetooth.h; sourceTree = SOURCE_ROOT; };
-		83C45CBC1A1B1BAB0012A3E5 /* Bluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bluetooth.m; path = StarTrack/Bluetooth.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +100,6 @@
 				83A43CC91A1072FB00809B3B /* Images.xcassets */,
 				83A43CCB1A1072FB00809B3B /* LaunchScreen.xib */,
 				83A43CBC1A1072FB00809B3B /* Supporting Files */,
-				83C45CBB1A1B1BAB0012A3E5 /* Bluetooth.h */,
-				83C45CBC1A1B1BAB0012A3E5 /* Bluetooth.m */,
 			);
 			path = startrack;
 			sourceTree = "<group>";
@@ -242,7 +237,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83C45CBD1A1B1BAB0012A3E5 /* Bluetooth.m in Sources */,
 				83A43CC51A1072FB00809B3B /* ViewController.m in Sources */,
 				83A43CC21A1072FB00809B3B /* AppDelegate.m in Sources */,
 				83A43CBF1A1072FB00809B3B /* main.m in Sources */,
