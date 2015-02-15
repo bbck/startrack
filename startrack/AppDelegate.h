@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MelodyManager.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (nonatomic, strong) MelodySmart *melody;
+@property (nonatomic, strong) MelodyManager *manager;
 
 @property (strong, nonatomic) UIWindow *window;
 
