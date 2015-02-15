@@ -31,27 +31,35 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    // Return the number of time zone names.
+    return [[NSTimeZone knownTimeZoneNames] count];
 }
 
-/*
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"Found Devices";
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    static NSString *MyIdentifier = @"MyIdentifier";
+    
+    /*
+     Retrieve a cell with the given identifier from the table view.
+     The cell is defined in the main storyboard: its identifier is MyIdentifier, and  its selection style is set to None.
+     */
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
+    }
+    
+    // Set up the cell.
+    NSString *timeZoneName = [[NSTimeZone knownTimeZoneNames] objectAtIndex:indexPath.row];
+    cell.textLabel.text = timeZoneName;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
