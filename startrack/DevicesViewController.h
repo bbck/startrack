@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MelodyManager.h"
 
-@interface DevicesViewController : UITableViewController <MelodyManagerDelegate>
+@interface DevicesViewController : UITableViewController <MelodySmartDelegate, MelodyManagerDelegate>
 
 @end

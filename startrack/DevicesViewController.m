@@ -9,7 +9,9 @@
 #import "DevicesViewController.h"
 #import "AppDelegate.h"
 
-@interface DevicesViewController ()
+@interface DevicesViewController () 
+
+@property (strong, nonatomic) AppDelegate *appDelegate;
 
 @end
 
@@ -24,20 +26,21 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    appDelegate.manager.delegate = self;
-    [appDelegate.manager scanForMelody];
+    self.appDelegate = [UIApplication sharedApplication].delegate;
+    self.appDelegate.manager.delegate = self;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [self.appDelegate.manager scanForMelody];
     [self.tableView reloadData];
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate.manager stopScanning];
+    [self.appDelegate.manager stopScanning];
 }
 
 - (IBAction)refreshDevices:(id)sender {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate.manager scanForMelody];
+    [self.appDelegate.manager scanForMelody];
 }
 
 #pragma mark - Table view data source
@@ -80,9 +83,37 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.appDelegate.melody = [MelodyManager foundDeviceAtIndex:indexPath.row];
+    self.appDelegate.melody.delegate = self;
+    [self.appDelegate.melody connect];
+}
+
 #pragma mark - Melody delegate
-- (void) melodyManagerDiscoveryDidRefresh:(MelodyManager*)manager {
+- (void)melodyManagerDiscoveryDidRefresh:(MelodyManager*)manager {
     [self.tableView reloadData];
+}
+
+- (void)melodySmart:(MelodySmart *)m didConnectToMelody:(BOOL)result {
+    if (!result) {
+        self.appDelegate.melody = nil;
+    }
+}
+
+- (void)melodySmartDidDisconnectFromMelody:(MelodySmart *)melody {
+    self.appDelegate.melody = nil;
+}
+
+- (void)melodySmartDidPopulateMelodyService:(MelodySmart *)m {
+    
+}
+
+- (void)melodySmart:(MelodySmart *)melody didReceiveData:(NSData *)data {
+    
+}
+
+- (void)melodySmart:(MelodySmart *)melody didSendData:(NSError *)error {
+    
 }
 
 @end
