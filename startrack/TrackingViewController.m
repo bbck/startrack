@@ -7,6 +7,7 @@
 //
 
 #import "TrackingViewController.h"
+#import "AppDelegate.h"
 
 @interface TrackingViewController ()
 
@@ -32,6 +33,13 @@
 
 - (IBAction)exposureCountAction:(id)sender {
     self.exposureCountField.placeholder = [NSString stringWithFormat:@"%.f", self.exposureCount.value];
+}
+
+- (IBAction)startAction:(id)sender {
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    NSString *commandString = [NSString stringWithFormat:@"%.f:%@:%@", self.exposureCount.value, self.rightAscension.text, self.declination.text];
+    NSData* data = [commandString dataUsingEncoding:NSUTF8StringEncoding];
+    [appDelegate.melody sendData:data];
 }
 
 /*

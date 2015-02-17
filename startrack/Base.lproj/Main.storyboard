@@ -141,6 +141,9 @@
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="227" y="133" width="46" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="startAction:" destination="dDv-lS-fSg" eventType="touchUpInside" id="0Jy-rU-Kc1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right ascension" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZn-jQ-PgV">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
