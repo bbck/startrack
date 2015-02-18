@@ -12,5 +12,7 @@
 
 + (NSNumber *)julianDayFor:(NSDate *)date;
 + (NSNumber *)localSiderealTimeForJulianDay:(NSNumber *)jd andLongitude:(NSNumber *)longitude;
++ (NSNumber *)altitudeForLocalSiderealTime:(NSNumber *)lmst andLatitude:(NSNumber *)lat andRightAscension:(NSNumber *)ra andDeclination:(NSNumber *)dec;
++ (NSNumber *)azimuthForLocalSiderealTime:(NSNumber *)lmst andLatitude:(NSNumber *)lat andRightAscension:(NSNumber *)ra andDeclination:(NSNumber *)dec;
 
 @end
