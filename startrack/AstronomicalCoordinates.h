@@ -11,5 +11,6 @@
 @interface AstronomicalCoordinates : NSObject
 
 + (NSNumber *)julianDayFor:(NSDate *)date;
++ (NSNumber *)localSiderealTimeForJulianDay:(NSNumber *)jd andLongitude:(NSNumber *)longitude;
 
 @end
