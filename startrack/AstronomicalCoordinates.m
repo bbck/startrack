@@ -16,12 +16,12 @@
 
 + (NSNumber *)julianDayFor:(NSDate *)date {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents *components = [gregorian components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour) fromDate:date];
+    NSDateComponents *components = [gregorian components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:date];
     
     long century = components.year / 100;
     long year = components.year;
     long month = components.month;
-    double day = components.day + components.hour / 24.0;
+    double day = components.day + components.hour / 24.0 + components.minute / 1440.0;
     
     if (month < 3) {
         year = year - 1;
@@ -34,12 +34,15 @@
 }
 
 + (NSNumber *)localSiderealTimeForJulianDay:(NSNumber *)jd andLongitude:(NSNumber *)longitude {
-    double jc = ([jd doubleValue] - 2451545.0) / 36525;
+    double jc = ([jd doubleValue] - 2451545.0L) / 36525L;
     
-    double gmst = 280.46061837 + (360.9856473662 * ([jd doubleValue] - 2451545.0)) + (0.000387933 * jc * jc) - (jc * jc * jc / 38710000.0);
+    double gmst = 280.46061837 + (360.98564736629L * ([jd doubleValue] - 2451545.0L)) + (0.000387933L * jc * jc) - (jc * jc * jc / 38710000.0L);
     
-    double lmst = gmst + ([longitude doubleValue] * (24.0/360));
-    lmst = fmod(lmst + 24.0, 24.0);
+    while (gmst < 0.) {
+        gmst += 360.;
+    }
+    
+    double lmst = gmst - [longitude doubleValue];
     
     return [[NSNumber alloc] initWithDouble:lmst];
 }
