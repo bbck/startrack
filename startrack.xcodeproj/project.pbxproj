@@ -11,6 +11,7 @@
 		8347DEE81A902A220064ED6E /* DevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8347DEE71A902A220064ED6E /* DevicesViewController.m */; };
 		8347DF091A9037050064ED6E /* TrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8347DF081A9037050064ED6E /* TrackingViewController.m */; };
 		8347DF0B1A903FEE0064ED6E /* libMelodySmart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8347DF0A1A903FEE0064ED6E /* libMelodySmart.a */; };
+		83691BE31A9412D8002D6008 /* AstronomicalCoordinates.m in Sources */ = {isa = PBXBuildFile; fileRef = 83691BE21A9412D8002D6008 /* AstronomicalCoordinates.m */; };
 		83A43CBF1A1072FB00809B3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A43CBE1A1072FB00809B3B /* main.m */; };
 		83A43CC21A1072FB00809B3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A43CC11A1072FB00809B3B /* AppDelegate.m */; };
 		83A43CC51A1072FB00809B3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A43CC41A1072FB00809B3B /* ViewController.m */; };
@@ -37,6 +38,8 @@
 		8347DF071A9037050064ED6E /* TrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackingViewController.h; sourceTree = "<group>"; };
 		8347DF081A9037050064ED6E /* TrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackingViewController.m; sourceTree = "<group>"; };
 		8347DF0A1A903FEE0064ED6E /* libMelodySmart.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMelodySmart.a; path = ../Melody/libMelodySmart.a; sourceTree = "<group>"; };
+		83691BE11A9412D8002D6008 /* AstronomicalCoordinates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalCoordinates.h; sourceTree = "<group>"; };
+		83691BE21A9412D8002D6008 /* AstronomicalCoordinates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalCoordinates.m; sourceTree = "<group>"; };
 		83A43CB91A1072FB00809B3B /* startrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = startrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A43CBD1A1072FB00809B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A43CBE1A1072FB00809B3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				8347DEE71A902A220064ED6E /* DevicesViewController.m */,
 				8347DF071A9037050064ED6E /* TrackingViewController.h */,
 				8347DF081A9037050064ED6E /* TrackingViewController.m */,
+				83691BE11A9412D8002D6008 /* AstronomicalCoordinates.h */,
+				83691BE21A9412D8002D6008 /* AstronomicalCoordinates.m */,
 				83A43CC61A1072FB00809B3B /* Main.storyboard */,
 				83A43CC91A1072FB00809B3B /* Images.xcassets */,
 				83A43CCB1A1072FB00809B3B /* LaunchScreen.xib */,
@@ -254,6 +259,7 @@
 				8347DF091A9037050064ED6E /* TrackingViewController.m in Sources */,
 				8347DEE81A902A220064ED6E /* DevicesViewController.m in Sources */,
 				83A43CC51A1072FB00809B3B /* ViewController.m in Sources */,
+				83691BE31A9412D8002D6008 /* AstronomicalCoordinates.m in Sources */,
 				83A43CC21A1072FB00809B3B /* AppDelegate.m in Sources */,
 				83A43CBF1A1072FB00809B3B /* main.m in Sources */,
 			);
