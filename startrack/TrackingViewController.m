@@ -8,6 +8,7 @@
 
 #import "TrackingViewController.h"
 #import "AppDelegate.h"
+#import "AstronomicalCoordinates.h"
 
 @interface TrackingViewController ()
 
@@ -37,19 +38,15 @@
 
 - (IBAction)startAction:(id)sender {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    NSString *commandString = [NSString stringWithFormat:@"%.f:%@:%@", self.exposureCount.value, self.rightAscension.text, self.declination.text];
+    NSNumber *jd = [AstronomicalCoordinates julianDayFor:[[NSDate alloc] init]];
+    NSNumber *lon = [[NSNumber alloc] initWithDouble:72.52313856199964];
+    NSNumber *lat = [[NSNumber alloc] initWithDouble:42.380367210000486];
+    NSNumber *lmst = [AstronomicalCoordinates localSiderealTimeForJulianDay:jd andLongitude:lon];
+    NSNumber *azimuth = [AstronomicalCoordinates azimuthForLocalSiderealTime:lmst andLatitude:lat andRightAscension:[[NSNumber alloc] initWithDouble:self.rightAscension.text.doubleValue] andDeclination:[[NSNumber alloc] initWithDouble:self.declination.text.doubleValue]];
+    NSNumber *altitude = [AstronomicalCoordinates altitudeForLocalSiderealTime:lmst andLatitude:[[NSNumber alloc] initWithDouble:38.921389] andRightAscension:[[NSNumber alloc] initWithDouble:347.3167] andDeclination:[[NSNumber alloc] initWithDouble:-6.719722]];
+    NSString *commandString = [NSString stringWithFormat:@"%.f:%f:%f", self.exposureCount.value, azimuth.doubleValue, altitude.doubleValue];
     NSData* data = [commandString dataUsingEncoding:NSUTF8StringEncoding];
     [appDelegate.melody sendData:data];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
