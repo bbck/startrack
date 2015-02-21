@@ -37,7 +37,6 @@
 }
 
 - (IBAction)startAction:(id)sender {
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSNumber *jd = [AstronomicalCoordinates julianDayFor:[[NSDate alloc] init]];
     NSNumber *lon = [[NSNumber alloc] initWithDouble:72.52313856199964];
     NSNumber *lat = [[NSNumber alloc] initWithDouble:42.380367210000486];
@@ -45,7 +44,13 @@
     NSNumber *azimuth = [AstronomicalCoordinates azimuthForLocalSiderealTime:lmst andLatitude:lat andRightAscension:[[NSNumber alloc] initWithDouble:self.rightAscension.text.doubleValue] andDeclination:[[NSNumber alloc] initWithDouble:self.declination.text.doubleValue]];
     NSNumber *altitude = [AstronomicalCoordinates altitudeForLocalSiderealTime:lmst andLatitude:[[NSNumber alloc] initWithDouble:38.921389] andRightAscension:[[NSNumber alloc] initWithDouble:347.3167] andDeclination:[[NSNumber alloc] initWithDouble:-6.719722]];
     NSString *commandString = [NSString stringWithFormat:@"%.f:%f:%f", self.exposureCount.value, azimuth.doubleValue, altitude.doubleValue];
-    NSData* data = [commandString dataUsingEncoding:NSUTF8StringEncoding];
+    [self sendCommand:commandString];
+}
+
+- (void)sendCommand:(NSString *)cmd {
+    NSLog(@"Sending command: '%@'", cmd);
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    NSData* data = [cmd dataUsingEncoding:NSUTF8StringEncoding];
     [appDelegate.melody sendData:data];
 }
 
