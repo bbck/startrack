@@ -43,7 +43,7 @@
     NSNumber *lmst = [AstronomicalCoordinates localSiderealTimeForJulianDay:jd andLongitude:lon];
     NSNumber *azimuth = [AstronomicalCoordinates azimuthForLocalSiderealTime:lmst andLatitude:lat andRightAscension:[[NSNumber alloc] initWithDouble:self.rightAscension.text.doubleValue] andDeclination:[[NSNumber alloc] initWithDouble:self.declination.text.doubleValue]];
     NSNumber *altitude = [AstronomicalCoordinates altitudeForLocalSiderealTime:lmst andLatitude:[[NSNumber alloc] initWithDouble:38.921389] andRightAscension:[[NSNumber alloc] initWithDouble:347.3167] andDeclination:[[NSNumber alloc] initWithDouble:-6.719722]];
-    NSString *commandString = [NSString stringWithFormat:@"%.f:%f:%f", self.exposureCount.value, azimuth.doubleValue, altitude.doubleValue];
+    NSString *commandString = [NSString stringWithFormat:@"%.f:%.1f:%.1f", self.exposureCount.value, azimuth.doubleValue, altitude.doubleValue];
     [self sendCommand:commandString];
 }
 
