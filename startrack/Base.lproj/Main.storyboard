@@ -205,6 +205,63 @@
                                     <rect key="frame" x="228" y="96" width="73" height="30"/>
                                 </variation>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo Commands" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toY-po-Ov3">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="174" y="220" width="153" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuP-lL-WaW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Align">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="203" y="249" width="35" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="alignAction:" destination="dDv-lS-fSg" eventType="touchUpInside" id="pIi-ol-V5O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldS-Ix-wUX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Track">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="263" y="249" width="37" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="trackAction:" destination="dDv-lS-fSg" eventType="touchUpInside" id="QDj-Qh-tNQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rRM-Z9-AfV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Off">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="266" y="287" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="offAction:" destination="dDv-lS-fSg" eventType="touchUpInside" id="SVN-TF-Msr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBV-Kv-seJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="200" y="287" width="40" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resetAction:" destination="dDv-lS-fSg" eventType="touchUpInside" id="5hP-Pg-6e8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -217,6 +274,11 @@
                                 <exclude reference="e2J-hO-YLg"/>
                                 <exclude reference="7Li-uS-Ixi"/>
                                 <exclude reference="EMI-ER-Ccp"/>
+                                <exclude reference="toY-po-Ov3"/>
+                                <exclude reference="YuP-lL-WaW"/>
+                                <exclude reference="ldS-Ix-wUX"/>
+                                <exclude reference="rRM-Z9-AfV"/>
+                                <exclude reference="UBV-Kv-seJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -229,6 +291,11 @@
                                 <include reference="e2J-hO-YLg"/>
                                 <include reference="7Li-uS-Ixi"/>
                                 <include reference="EMI-ER-Ccp"/>
+                                <include reference="toY-po-Ov3"/>
+                                <include reference="YuP-lL-WaW"/>
+                                <include reference="ldS-Ix-wUX"/>
+                                <include reference="rRM-Z9-AfV"/>
+                                <include reference="UBV-Kv-seJ"/>
                             </mask>
                         </variation>
                     </view>

@@ -47,6 +47,22 @@
     [self sendCommand:commandString];
 }
 
+- (IBAction)alignAction:(id)sender {
+    [self sendCommand:@"N"];
+}
+
+- (IBAction)trackAction:(id)sender {
+    [self sendCommand:@"T"];
+}
+
+- (IBAction)resetAction:(id)sender {
+    [self sendCommand:@"D"];
+}
+
+- (IBAction)offAction:(id)sender {
+    [self sendCommand:@"O"];
+}
+
 - (void)sendCommand:(NSString *)cmd {
     NSLog(@"Sending command: '%@'", cmd);
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
