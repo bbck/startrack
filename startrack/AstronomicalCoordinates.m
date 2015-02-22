@@ -36,32 +36,38 @@ const double RAD2DEG = 57.295779513082322865;
     return [[NSNumber alloc] initWithDouble:jd];
 }
 
-+ (NSNumber *)localSiderealTimeForJulianDay:(NSNumber *)jd andLongitude:(NSNumber *)longitude {
-    double jc = ([jd doubleValue] - 2451545.0L) / 36525L;
++ (NSNumber *)siderealTimeForJulianDay:(NSNumber *)jd {
+    double t = ([jd doubleValue] - 2451545.0) / 36525;
     
-    double gmst = 280.46061837 + (360.98564736629L * ([jd doubleValue] - 2451545.0L)) + (0.000387933L * jc * jc) - (jc * jc * jc / 38710000.0L);
+    double gmst = 280.46061837 + (360.98564736629 * ([jd doubleValue] - 2451545.0)) + (0.000387933 * t * t) - (t * t * t / 38710000.0);
     
     while (gmst < 0.) {
         gmst += 360.;
     }
     
-    double lmst = gmst - [longitude doubleValue];
+    while (gmst > 360.) {
+        gmst -= 360.;
+    }
     
-    return [[NSNumber alloc] initWithDouble:lmst];
+    return [[NSNumber alloc] initWithDouble:gmst];
 }
 
-+ (NSNumber *)altitudeForLocalSiderealTime:(NSNumber *)lmst andLatitude:(NSNumber *)lat andRightAscension:(NSNumber *)ra andDeclination:(NSNumber *)dec {
-    double hourAngle = [lmst doubleValue] - [ra doubleValue];
++ (NSNumber *)hourAngleForSiderealTime:(NSNumber *)gmst andLongitude:(NSNumber *)lon andRightAscension:(NSNumber *)ra {
+    double hourAngle = [gmst doubleValue] - [lon doubleValue] - [ra doubleValue];
     
-    double altitude = asin(sin([lat doubleValue] * DEG2RAD) * sin([dec doubleValue] * DEG2RAD) + cos([lat doubleValue] * DEG2RAD) * cos([dec doubleValue] * DEG2RAD) * cos(hourAngle * DEG2RAD)) * RAD2DEG;
+    return [[NSNumber alloc] initWithDouble:hourAngle];
+}
+
++ (NSNumber *)altitudeForHourAngle:(NSNumber *)ha andLatitude:(NSNumber *)lat andRightAscension:(NSNumber *)ra andDeclination:(NSNumber *)dec {
+    
+    double altitude = asin(sin([lat doubleValue] * DEG2RAD) * sin([dec doubleValue] * DEG2RAD) + cos([lat doubleValue] * DEG2RAD) * cos([dec doubleValue] * DEG2RAD) * cos([ha doubleValue] * DEG2RAD)) * RAD2DEG;
     
     return [[NSNumber alloc] initWithDouble:altitude];
 }
 
-+ (NSNumber *)azimuthForLocalSiderealTime:(NSNumber *)lmst andLatitude:(NSNumber *)lat andRightAscension:(NSNumber *)ra andDeclination:(NSNumber *)dec {
-    double hourAngle = [lmst doubleValue] - [ra doubleValue];
++ (NSNumber *)azimuthForHourAngle:(NSNumber *)ha andLatitude:(NSNumber *)lat andRightAscension:(NSNumber *)ra andDeclination:(NSNumber *)dec {
     
-    double azimuth = atan2(sin(hourAngle * DEG2RAD), (cos(hourAngle * DEG2RAD) * sin([lat doubleValue] * DEG2RAD) - tan([dec doubleValue] * DEG2RAD) * cos([lat doubleValue] * DEG2RAD))) * RAD2DEG;
+    double azimuth = atan2(sin([ha doubleValue] * DEG2RAD), (cos([ha doubleValue] * DEG2RAD) * sin([lat doubleValue] * DEG2RAD) - tan([dec doubleValue] * DEG2RAD) * cos([lat doubleValue] * DEG2RAD))) * RAD2DEG;
     
     return [[NSNumber alloc] initWithDouble:azimuth];
 }
