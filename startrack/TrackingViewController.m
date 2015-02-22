@@ -37,13 +37,18 @@
 }
 
 - (IBAction)startAction:(id)sender {
-    NSNumber *jd = [AstronomicalCoordinates julianDayFor:[[NSDate alloc] init]];
-    NSNumber *lon = [[NSNumber alloc] initWithDouble:72.52313856199964];
-    NSNumber *lat = [[NSNumber alloc] initWithDouble:42.380367210000486];
-    NSNumber *lmst = [AstronomicalCoordinates localSiderealTimeForJulianDay:jd andLongitude:lon];
-    NSNumber *azimuth = [AstronomicalCoordinates azimuthForLocalSiderealTime:lmst andLatitude:lat andRightAscension:[[NSNumber alloc] initWithDouble:self.rightAscension.text.doubleValue] andDeclination:[[NSNumber alloc] initWithDouble:self.declination.text.doubleValue]];
-    NSNumber *altitude = [AstronomicalCoordinates altitudeForLocalSiderealTime:lmst andLatitude:[[NSNumber alloc] initWithDouble:38.921389] andRightAscension:[[NSNumber alloc] initWithDouble:347.3167] andDeclination:[[NSNumber alloc] initWithDouble:-6.719722]];
-    NSString *commandString = [NSString stringWithFormat:@"T%.f:%.1f:%.1f", self.exposureCount.value, azimuth.doubleValue, altitude.doubleValue];
+    double lon = 72.52313856199964;
+    double lat = 42.380367210000486;
+    double ra = self.rightAscension.text.doubleValue;
+    double dec = self.declination.text.doubleValue;
+    
+    double jd = [AstronomicalCoordinates julianDayFor:[[NSDate alloc] init]];
+    double st = [AstronomicalCoordinates siderealTimeForJulianDay:jd];
+    double ha = [AstronomicalCoordinates hourAngleForSiderealTime:st andLongitude:lon andRightAscension:ra];
+    double azimuth = [AstronomicalCoordinates azimuthForHourAngle:ha andLatitude:lat andRightAscension:ra andDeclination:dec];
+    double altitude = [AstronomicalCoordinates altitudeForHourAngle:ha andLatitude:lat andRightAscension:ra andDeclination:dec];
+    
+    NSString *commandString = [NSString stringWithFormat:@"T%.f:%.1f:%.1f", self.exposureCount.value, azimuth, altitude];
     [self sendCommand:commandString];
 }
 
