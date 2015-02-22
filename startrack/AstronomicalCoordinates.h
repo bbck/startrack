@@ -10,9 +10,10 @@
 
 @interface AstronomicalCoordinates : NSObject
 
-+ (NSNumber *)julianDayFor:(NSDate *)date;
-+ (NSNumber *)localSiderealTimeForJulianDay:(NSNumber *)jd andLongitude:(NSNumber *)longitude;
-+ (NSNumber *)altitudeForLocalSiderealTime:(NSNumber *)lmst andLatitude:(NSNumber *)lat andRightAscension:(NSNumber *)ra andDeclination:(NSNumber *)dec;
-+ (NSNumber *)azimuthForLocalSiderealTime:(NSNumber *)lmst andLatitude:(NSNumber *)lat andRightAscension:(NSNumber *)ra andDeclination:(NSNumber *)dec;
++ (double)julianDayFor:(NSDate *)date;
++ (double)siderealTimeForJulianDay:(double)jd;
++ (double)hourAngleForSiderealTime:(double)gmst andLongitude:(double)lon andRightAscension:(double)ra;
++ (double)altitudeForHourAngle:(double)ha andLatitude:(double)lat andRightAscension:(double)ra andDeclination:(double)dec;
++ (double)azimuthForHourAngle:(double)ha andLatitude:(double)lat andRightAscension:(double)ra andDeclination:(double)dec;
 
 @end
