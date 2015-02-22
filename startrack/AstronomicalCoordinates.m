@@ -61,7 +61,7 @@ const double RAD2DEG = 57.295779513082322865;
 + (NSNumber *)azimuthForLocalSiderealTime:(NSNumber *)lmst andLatitude:(NSNumber *)lat andRightAscension:(NSNumber *)ra andDeclination:(NSNumber *)dec {
     double hourAngle = [lmst doubleValue] - [ra doubleValue];
     
-    double azimuth = atan(sin(hourAngle * DEG2RAD) / (cos(hourAngle * DEG2RAD) * sin([lat doubleValue] * DEG2RAD) - tan([dec doubleValue] * DEG2RAD) * cos([lat doubleValue] * DEG2RAD))) * RAD2DEG;
+    double azimuth = atan2(sin(hourAngle * DEG2RAD), (cos(hourAngle * DEG2RAD) * sin([lat doubleValue] * DEG2RAD) - tan([dec doubleValue] * DEG2RAD) * cos([lat doubleValue] * DEG2RAD))) * RAD2DEG;
     
     return [[NSNumber alloc] initWithDouble:azimuth];
 }
