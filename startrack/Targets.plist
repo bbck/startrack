@@ -1,31 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>West</key>
-	<array>
-		<integer>0</integer>
-		<integer>0</integer>
-	</array>
-	<key>East</key>
-	<array>
-		<integer>0</integer>
-		<integer>0</integer>
-	</array>
-	<key>South</key>
-	<array>
-		<integer>0</integer>
-		<integer>0</integer>
-	</array>
-	<key>North</key>
-	<array>
-		<integer>0</integer>
-		<integer>0</integer>
-	</array>
-	<key>Zero</key>
-	<array>
-		<integer>0</integer>
-		<integer>0</integer>
-	</array>
-</dict>
+<array>
+	<dict>
+		<key>Name</key>
+		<string>Manual</string>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>20.79226115</real>
+		<key>Name</key>
+		<string>Aries</string>
+		<key>Nickname</key>
+		<string>Ram</string>
+		<key>Right Ascension</key>
+		<real>2.636080056</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>42.0870619</real>
+		<key>Name</key>
+		<string>Auriga</string>
+		<key>Nickname</key>
+		<string>Charioteer</string>
+		<key>Right Ascension</key>
+		<real>6.073697111</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>19.80579135</real>
+		<key>Name</key>
+		<string>Cancer</string>
+		<key>Nickname</key>
+		<string>Crab</string>
+		<key>Right Ascension</key>
+		<real>8.649282458</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>5.970104</real>
+		<key>Name</key>
+		<string>Canis Major</string>
+		<key>Nickname</key>
+		<string>Great Dog</string>
+		<key>Right Ascension</key>
+		<real>7.652857111</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-18.02315715</real>
+		<key>Name</key>
+		<string>Capricornus</string>
+		<key>Nickname</key>
+		<string>Sea Goat</string>
+		<key>Right Ascension</key>
+		<real>21.0487995</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>62.1840496</real>
+		<key>Name</key>
+		<string>Cassiopeia</string>
+		<key>Nickname</key>
+		<string>Seated Queen</string>
+		<key>Right Ascension</key>
+		<real>1.319262417</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>22.6001697</real>
+		<key>Name</key>
+		<string>Gemini</string>
+		<key>Nickname</key>
+		<string>Twins</string>
+		<key>Right Ascension</key>
+		<real>7.070612889</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>13.1387119</real>
+		<key>Name</key>
+		<string>Leo</string>
+		<key>Nickname</key>
+		<string>Lion</string>
+		<key>Right Ascension</key>
+		<real>10.66710667</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-19.04630185</real>
+		<key>Name</key>
+		<string>Lepus</string>
+		<key>Nickname</key>
+		<string>Hare</string>
+		<key>Right Ascension</key>
+		<real>5.565830708</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-15.23458375</real>
+		<key>Name</key>
+		<string>Libra</string>
+		<key>Nickname</key>
+		<string>Scales</string>
+		<key>Right Ascension</key>
+		<real>15.19934275</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>36.68926715</real>
+		<key>Name</key>
+		<string>Lyra</string>
+		<key>Nickname</key>
+		<string>Lyre</string>
+		<key>Right Ascension</key>
+		<real>18.85288431</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>5.94897035</real>
+		<key>Name</key>
+		<string>Orion</string>
+		<key>Nickname</key>
+		<string>Hunter</string>
+		<key>Right Ascension</key>
+		<real>5.576542597</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>50.7211685</real>
+		<key>Name</key>
+		<string>Ursa Major</string>
+		<key>Nickname</key>
+		<string>Great Bear</string>
+		<key>Right Ascension</key>
+		<real>11.31267833</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-4.1584239</real>
+		<key>Name</key>
+		<string>Virgo</string>
+		<key>Nickname</key>
+		<string>Maiden</string>
+		<key>Right Ascension</key>
+		<real>13.40651036</real>
+	</dict>
+</array>
 </plist>
