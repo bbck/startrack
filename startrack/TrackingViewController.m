@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIStepper *exposureCount;
 @property (weak, nonatomic) IBOutlet UITextField *exposureCountField;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (weak, nonatomic) IBOutlet UIPickerView *targetPicker;
 
 @end
 
@@ -24,7 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.targetPicker.dataSource = self;
+    self.targetPicker.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,6 +76,42 @@
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSData* data = [cmd dataUsingEncoding:NSUTF8StringEncoding];
     [appDelegate.melody sendData:data];
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Targets" ofType:@"plist"];
+    NSArray *targets = [[NSArray alloc] initWithContentsOfFile:plistPath];
+    
+    return targets.count;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Targets" ofType:@"plist"];
+    NSArray *targets = [[NSArray alloc] initWithContentsOfFile:plistPath];
+    
+    return [targets[row] valueForKey:@"Name"];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    if (row > 0) {
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Targets" ofType:@"plist"];
+        NSArray *targets = [[NSArray alloc] initWithContentsOfFile:plistPath];
+        
+        double ra = [[targets[row] valueForKey:@"Right Ascension"] doubleValue];
+        double dec = [[targets[row] valueForKey:@"Declination"] doubleValue];
+        
+        ra = ra * 15;
+        
+        self.rightAscension.text = [[NSString alloc] initWithFormat:@"%f", ra];
+        self.declination.text = [[NSString alloc] initWithFormat:@"%f", dec];
+    } else {
+        self.rightAscension.text = @"";
+        self.declination.text = @"";
+    }
 }
 
 @end

@@ -262,6 +262,21 @@
                                     <action selector="resetAction:" destination="dDv-lS-fSg" eventType="touchUpInside" id="5hP-Pg-6e8"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqC-dg-KjI">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="395" width="500" height="162"/>
+                                </variation>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Select" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqe-Gc-Zov">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="190" y="366" width="121" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -279,6 +294,8 @@
                                 <exclude reference="ldS-Ix-wUX"/>
                                 <exclude reference="rRM-Z9-AfV"/>
                                 <exclude reference="UBV-Kv-seJ"/>
+                                <exclude reference="jqC-dg-KjI"/>
+                                <exclude reference="xqe-Gc-Zov"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
@@ -296,6 +313,8 @@
                                 <include reference="ldS-Ix-wUX"/>
                                 <include reference="rRM-Z9-AfV"/>
                                 <include reference="UBV-Kv-seJ"/>
+                                <include reference="jqC-dg-KjI"/>
+                                <include reference="xqe-Gc-Zov"/>
                             </mask>
                         </variation>
                     </view>
@@ -306,6 +325,7 @@
                         <outlet property="exposureCountField" destination="EMI-ER-Ccp" id="1OD-Rg-5G6"/>
                         <outlet property="rightAscension" destination="Jec-u5-Hdb" id="8x3-9g-soY"/>
                         <outlet property="startButton" destination="Lvt-pv-XtK" id="802-C2-EVR"/>
+                        <outlet property="targetPicker" destination="jqC-dg-KjI" id="EKB-Le-sKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9o-3t-nKH" userLabel="First Responder" sceneMemberID="firstResponder"/>

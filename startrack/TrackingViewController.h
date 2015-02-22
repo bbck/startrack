@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TrackingViewController : UIViewController
+@interface TrackingViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
 @end
