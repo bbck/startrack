@@ -51,8 +51,13 @@
     double azimuth = [AstronomicalCoordinates azimuthForHourAngle:ha andLatitude:lat andRightAscension:ra andDeclination:dec];
     double altitude = [AstronomicalCoordinates altitudeForHourAngle:ha andLatitude:lat andRightAscension:ra andDeclination:dec];
     
-    NSString *commandString = [NSString stringWithFormat:@"T%.f:%.1f:%.1f", self.exposureCount.value, azimuth, altitude];
-    [self sendCommand:commandString];
+    if (altitude < 0.) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Target is not in the visible sky." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    } else {
+        NSString *commandString = [NSString stringWithFormat:@"T%.f:%.1f:%.1f", self.exposureCount.value, azimuth, altitude];
+        [self sendCommand:commandString];
+    }
 }
 
 - (IBAction)alignAction:(id)sender {
