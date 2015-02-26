@@ -19,6 +19,7 @@ const double RAD2DEG = 57.295779513082322865;
 
 + (double)julianDayFor:(NSDate *)date {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    [gregorian setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
     NSDateComponents *components = [gregorian components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:date];
     
     double century = components.year / 100;

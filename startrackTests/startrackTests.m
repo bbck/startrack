@@ -22,6 +22,7 @@
     [super setUp];
     
     NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    [cal setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
     NSDateComponents *components = [[NSDateComponents alloc] init];
     
     components.year = 1987;
@@ -39,6 +40,7 @@
 
 - (void)testJulianDay {
     NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    [cal setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
     NSDateComponents *components = [[NSDateComponents alloc] init];
     NSDate *date;
     
@@ -77,12 +79,23 @@
     date = [cal dateFromComponents:components];
     
     XCTAssertEqual([AstronomicalCoordinates julianDayFor:date], 2457079.25);
+    
+    components.year = 2015;
+    components.month = 02;
+    components.day = 26;
+    components.hour = 21;
+    
+    date = [cal dateFromComponents:components];
+    
+    XCTAssertEqual([AstronomicalCoordinates julianDayFor:date], 2457080.375);
 }
 
 - (void)testSiderealTime {
     double jd = [AstronomicalCoordinates julianDayFor:self.date];
     
     XCTAssertEqualWithAccuracy([AstronomicalCoordinates siderealTimeForJulianDay:jd], 128.7378733, .01);
+    
+    XCTAssertEqualWithAccuracy([AstronomicalCoordinates siderealTimeForJulianDay:2457080.375000], 111.38841, .01);
 }
 
 - (void)testHourAngle {
