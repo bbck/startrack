@@ -55,6 +55,10 @@ const double RAD2DEG = 57.295779513082322865;
 + (double)hourAngleForSiderealTime:(double)gmst andLongitude:(double)lon andRightAscension:(double)ra {
     double hourAngle = gmst - lon - ra;
     
+    while (hourAngle < 0.) {
+        hourAngle += 360.;
+    }
+    
     return hourAngle;
 }
 
