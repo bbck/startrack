@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Devices View Controller-->
@@ -133,18 +133,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvt-pv-XtK">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="227" y="133" width="46" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="startAction:" destination="dDv-lS-fSg" eventType="touchUpInside" id="0Jy-rU-Kc1"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right ascension" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZn-jQ-PgV">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -205,13 +193,40 @@
                                     <rect key="frame" x="228" y="96" width="73" height="30"/>
                                 </variation>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exposure length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtP-qk-SA5">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="95" y="138" width="125" height="21"/>
+                                </variation>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Dri-S8-pFy">
+                                <rect key="frame" x="-47" y="-14" width="94" height="29"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="309" y="134" width="94" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="exposureCountAction:" destination="dDv-lS-fSg" eventType="valueChanged" id="WQW-La-02j"/>
+                                    <action selector="exposureLengthAction:" destination="dDv-lS-fSg" eventType="valueChanged" id="acx-P5-lSy"/>
+                                </connections>
+                            </stepper>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88k-6K-Ysk">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="228" y="134" width="73" height="30"/>
+                                </variation>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo Commands" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toY-po-Ov3">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="174" y="220" width="153" height="21"/>
+                                    <rect key="frame" x="174" y="274" width="153" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuP-lL-WaW">
@@ -220,7 +235,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="203" y="249" width="35" height="30"/>
+                                    <rect key="frame" x="203" y="303" width="35" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="alignAction:" destination="dDv-lS-fSg" eventType="touchUpInside" id="pIi-ol-V5O"/>
@@ -232,7 +247,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="263" y="249" width="37" height="30"/>
+                                    <rect key="frame" x="263" y="303" width="37" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="trackAction:" destination="dDv-lS-fSg" eventType="touchUpInside" id="QDj-Qh-tNQ"/>
@@ -244,7 +259,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="266" y="287" width="30" height="30"/>
+                                    <rect key="frame" x="266" y="341" width="30" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="offAction:" destination="dDv-lS-fSg" eventType="touchUpInside" id="SVN-TF-Msr"/>
@@ -256,7 +271,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="200" y="287" width="40" height="30"/>
+                                    <rect key="frame" x="200" y="341" width="40" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="resetAction:" destination="dDv-lS-fSg" eventType="touchUpInside" id="5hP-Pg-6e8"/>
@@ -265,7 +280,7 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqC-dg-KjI">
                                 <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="395" width="500" height="162"/>
+                                    <rect key="frame" x="0.0" y="449" width="500" height="162"/>
                                 </variation>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Select" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqe-Gc-Zov">
@@ -274,14 +289,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="190" y="366" width="121" height="21"/>
+                                    <rect key="frame" x="190" y="420" width="121" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lvt-pv-XtK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="227" y="172" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="startAction:" destination="dDv-lS-fSg" eventType="touchUpInside" id="0Jy-rU-Kc1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Lvt-pv-XtK"/>
                                 <exclude reference="TZn-jQ-PgV"/>
                                 <exclude reference="zVR-Cq-JM5"/>
                                 <exclude reference="dHo-m0-bhS"/>
@@ -289,6 +315,9 @@
                                 <exclude reference="e2J-hO-YLg"/>
                                 <exclude reference="7Li-uS-Ixi"/>
                                 <exclude reference="EMI-ER-Ccp"/>
+                                <exclude reference="QtP-qk-SA5"/>
+                                <exclude reference="Dri-S8-pFy"/>
+                                <exclude reference="88k-6K-Ysk"/>
                                 <exclude reference="toY-po-Ov3"/>
                                 <exclude reference="YuP-lL-WaW"/>
                                 <exclude reference="ldS-Ix-wUX"/>
@@ -296,11 +325,11 @@
                                 <exclude reference="UBV-Kv-seJ"/>
                                 <exclude reference="jqC-dg-KjI"/>
                                 <exclude reference="xqe-Gc-Zov"/>
+                                <exclude reference="Lvt-pv-XtK"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
-                                <include reference="Lvt-pv-XtK"/>
                                 <include reference="TZn-jQ-PgV"/>
                                 <include reference="zVR-Cq-JM5"/>
                                 <include reference="dHo-m0-bhS"/>
@@ -308,6 +337,9 @@
                                 <include reference="e2J-hO-YLg"/>
                                 <include reference="7Li-uS-Ixi"/>
                                 <include reference="EMI-ER-Ccp"/>
+                                <include reference="QtP-qk-SA5"/>
+                                <include reference="Dri-S8-pFy"/>
+                                <include reference="88k-6K-Ysk"/>
                                 <include reference="toY-po-Ov3"/>
                                 <include reference="YuP-lL-WaW"/>
                                 <include reference="ldS-Ix-wUX"/>
@@ -315,6 +347,7 @@
                                 <include reference="UBV-Kv-seJ"/>
                                 <include reference="jqC-dg-KjI"/>
                                 <include reference="xqe-Gc-Zov"/>
+                                <include reference="Lvt-pv-XtK"/>
                             </mask>
                         </variation>
                     </view>
@@ -323,6 +356,8 @@
                         <outlet property="declination" destination="dHo-m0-bhS" id="zsS-4l-gkx"/>
                         <outlet property="exposureCount" destination="7Li-uS-Ixi" id="rAH-5K-kDh"/>
                         <outlet property="exposureCountField" destination="EMI-ER-Ccp" id="1OD-Rg-5G6"/>
+                        <outlet property="exposureLength" destination="Dri-S8-pFy" id="7cx-33-xf4"/>
+                        <outlet property="exposureLengthField" destination="88k-6K-Ysk" id="Bh7-JH-F9k"/>
                         <outlet property="rightAscension" destination="Jec-u5-Hdb" id="8x3-9g-soY"/>
                         <outlet property="startButton" destination="Lvt-pv-XtK" id="802-C2-EVR"/>
                         <outlet property="targetPicker" destination="jqC-dg-KjI" id="EKB-Le-sKs"/>

@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *declination;
 @property (weak, nonatomic) IBOutlet UIStepper *exposureCount;
 @property (weak, nonatomic) IBOutlet UITextField *exposureCountField;
+@property (weak, nonatomic) IBOutlet UIStepper *exposureLength;
+@property (weak, nonatomic) IBOutlet UITextField *exposureLengthField;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (weak, nonatomic) IBOutlet UIPickerView *targetPicker;
 
@@ -39,6 +41,10 @@
     self.exposureCountField.placeholder = [NSString stringWithFormat:@"%.f", self.exposureCount.value];
 }
 
+- (IBAction)exposureLengthAction:(id)sender {
+    self.exposureLengthField.placeholder = [NSString stringWithFormat:@"%.f", self.exposureLength.value];
+}
+
 - (IBAction)startAction:(id)sender {
     double lon = 72.52313856199964;
     double lat = 42.380367210000486;
@@ -55,7 +61,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Target is not in the visible sky." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     } else {
-        NSString *commandString = [NSString stringWithFormat:@"T%.f:%.1f:%.1f", self.exposureCount.value, azimuth, altitude];
+        NSString *commandString = [NSString stringWithFormat:@"T%.f:%.f:%.1f:%.1f", self.exposureCount.value, self.exposureLength.value, azimuth, altitude];
         [self sendCommand:commandString];
     }
 }
