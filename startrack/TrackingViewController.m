@@ -12,8 +12,13 @@
 
 @interface TrackingViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextField *rightAscension;
-@property (weak, nonatomic) IBOutlet UITextField *declination;
+
+@property (weak, nonatomic) IBOutlet UITextField *rightAscensionHours;
+@property (weak, nonatomic) IBOutlet UITextField *rightAscensionMinutes;
+@property (weak, nonatomic) IBOutlet UITextField *rightAscensionSeconds;
+@property (weak, nonatomic) IBOutlet UITextField *declinationDegrees;
+@property (weak, nonatomic) IBOutlet UITextField *declinationMinutes;
+@property (weak, nonatomic) IBOutlet UITextField *declinationSeconds;
 @property (weak, nonatomic) IBOutlet UIStepper *exposureCount;
 @property (weak, nonatomic) IBOutlet UITextField *exposureCountField;
 @property (weak, nonatomic) IBOutlet UIStepper *exposureLength;
@@ -48,8 +53,8 @@
 - (IBAction)startAction:(id)sender {
     double lon = 72.52313856199964;
     double lat = 42.380367210000486;
-    double ra = self.rightAscension.text.doubleValue;
-    double dec = self.declination.text.doubleValue;
+    double ra = (self.rightAscensionHours.text.doubleValue + self.rightAscensionMinutes.text.doubleValue / 60. + self.rightAscensionSeconds.text.doubleValue / 3600.) * 15.;
+    double dec = self.declinationDegrees.text.doubleValue + self.declinationMinutes.text.doubleValue / 60 + self.declinationMinutes.text.doubleValue / 3600;
     
     double jd = [AstronomicalCoordinates julianDayFor:[[NSDate alloc] init]];
     double st = [AstronomicalCoordinates siderealTimeForJulianDay:jd];
@@ -113,15 +118,31 @@
         NSArray *targets = [[NSArray alloc] initWithContentsOfFile:plistPath];
         
         double ra = [[targets[row] valueForKey:@"Right Ascension"] doubleValue];
+        int raHours, raMinutes, raSeconds = 0;
         double dec = [[targets[row] valueForKey:@"Declination"] doubleValue];
+        int decDegrees, decMinutes, decSeconds = 0;
         
-        ra = ra * 15;
+        raHours = ra;
+        raMinutes = (ra - raHours) * 60;
+        raSeconds = (ra - raHours - raMinutes / 60.) * 3600;
         
-        self.rightAscension.text = [[NSString alloc] initWithFormat:@"%f", ra];
-        self.declination.text = [[NSString alloc] initWithFormat:@"%f", dec];
+        decDegrees = dec;
+        decMinutes = (dec - decDegrees) * 60;
+        decSeconds = (dec - decDegrees - decMinutes / 60.) * 3600;
+        
+        self.rightAscensionHours.text = [[NSString alloc] initWithFormat:@"%d", raHours];
+        self.rightAscensionMinutes.text = [[NSString alloc] initWithFormat:@"%d",  raMinutes];
+        self.rightAscensionSeconds.text = [[NSString alloc] initWithFormat:@"%d",  raSeconds];
+        self.declinationDegrees.text = [[NSString alloc] initWithFormat:@"%d",  decDegrees];
+        self.declinationMinutes.text = [[NSString alloc] initWithFormat:@"%d",  decMinutes];
+        self.declinationSeconds.text = [[NSString alloc] initWithFormat:@"%d",  decSeconds];
     } else {
-        self.rightAscension.text = @"";
-        self.declination.text = @"";
+        self.rightAscensionHours.text = @"";
+        self.rightAscensionMinutes.text = @"";
+        self.rightAscensionSeconds.text = @"";
+        self.declinationDegrees.text = @"";
+        self.declinationMinutes.text = @"";
+        self.declinationSeconds.text = @"";
     }
 }
 
