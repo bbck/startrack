@@ -72,11 +72,11 @@
 }
 
 - (IBAction)alignAction:(id)sender {
-    [self sendCommand:@"N"];
+    [self sendCommand:@"N:42.38"];
 }
 
 - (IBAction)trackAction:(id)sender {
-    [self sendCommand:@"T3:45.0:45.0"];
+    [self sendCommand:@"F"];
 }
 
 - (IBAction)resetAction:(id)sender {
