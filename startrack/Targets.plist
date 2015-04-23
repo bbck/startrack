@@ -8,6 +8,66 @@
 	</dict>
 	<dict>
 		<key>Declination</key>
+		<real>37.43182085</real>
+		<key>Name</key>
+		<string>Andromeda</string>
+		<key>Nickname</key>
+		<string>Chained Maiden</string>
+		<key>Right Ascension</key>
+		<real>0.807611</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-32.4835701</real>
+		<key>Name</key>
+		<string>Antlia</string>
+		<key>Nickname</key>
+		<string>Air Pump</string>
+		<key>Right Ascension</key>
+		<real>10.27378081</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-75.30007555</real>
+		<key>Name</key>
+		<string>Apus</string>
+		<key>Nickname</key>
+		<string>Bird of Paradise</string>
+		<key>Right Ascension</key>
+		<real>16.14422894</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-10.78918685</real>
+		<key>Name</key>
+		<string>Aquarius</string>
+		<key>Nickname</key>
+		<string>Water Bearer</string>
+		<key>Right Ascension</key>
+		<real>22.2896814</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>3.41089345</real>
+		<key>Name</key>
+		<string>Aquila</string>
+		<key>Nickname</key>
+		<string>Eagle</string>
+		<key>Right Ascension</key>
+		<real>19.66702935</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-56.58827785</real>
+		<key>Name</key>
+		<string>Ara</string>
+		<key>Nickname</key>
+		<string>Altar</string>
+		<key>Right Ascension</key>
+		<real>17.37476256</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
 		<real>20.79226115</real>
 		<key>Name</key>
 		<string>Aries</string>
@@ -28,6 +88,26 @@
 	</dict>
 	<dict>
 		<key>Declination</key>
+		<real>31.2027209</real>
+		<key>Name</key>
+		<string>Boötes</string>
+		<key>Nickname</key>
+		<string>Herdsman</string>
+		<key>Right Ascension</key>
+		<real>14.71064331</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-37.8816633</real>
+		<key>Name</key>
+		<string>Caelum</string>
+		<key>Nickname</key>
+		<string>Engraving Tool</string>
+		<key>Right Ascension</key>
+		<real>4.704577458</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
 		<real>19.80579135</real>
 		<key>Name</key>
 		<string>Cancer</string>
@@ -38,11 +118,31 @@
 	</dict>
 	<dict>
 		<key>Declination</key>
+		<real>40.10179045</real>
+		<key>Name</key>
+		<string>Canes Venatici</string>
+		<key>Nickname</key>
+		<string>Hunting Dogs</string>
+		<key>Right Ascension</key>
+		<real>13.11601167</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
 		<real>5.970104</real>
 		<key>Name</key>
 		<string>Canis Major</string>
 		<key>Nickname</key>
 		<string>Great Dog</string>
+		<key>Right Ascension</key>
+		<real>7.652857111</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>6.4272082</real>
+		<key>Name</key>
+		<string>Canis Minor</string>
+		<key>Nickname</key>
+		<string>Lesser Dog</string>
 		<key>Right Ascension</key>
 		<real>7.652857111</real>
 	</dict>
@@ -58,6 +158,16 @@
 	</dict>
 	<dict>
 		<key>Declination</key>
+		<real>-63.21928025</real>
+		<key>Name</key>
+		<string>Carina</string>
+		<key>Nickname</key>
+		<string>Keel</string>
+		<key>Right Ascension</key>
+		<real>8.567698708</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
 		<real>62.1840496</real>
 		<key>Name</key>
 		<string>Cassiopeia</string>
@@ -68,6 +178,146 @@
 	</dict>
 	<dict>
 		<key>Declination</key>
+		<real>-47.34533215</real>
+		<key>Name</key>
+		<string>Centaurus</string>
+		<key>Nickname</key>
+		<string>Centaur</string>
+		<key>Right Ascension</key>
+		<real>13.07111786</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-7.17925735</real>
+		<key>Name</key>
+		<string>Cetus</string>
+		<key>Nickname</key>
+		<string>Sea Monster</string>
+		<key>Right Ascension</key>
+		<real>1.668323667</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-79.2049942</real>
+		<key>Name</key>
+		<string>Chamaeleon</string>
+		<key>Nickname</key>
+		<string>Chameleon</string>
+		<key>Right Ascension</key>
+		<real>10.77752708</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-63.0303631</real>
+		<key>Name</key>
+		<string>Circinus</string>
+		<key>Nickname</key>
+		<string>Draftsman&apos;s Compass</string>
+		<key>Right Ascension</key>
+		<real>14.57566836</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-35.0944262</real>
+		<key>Name</key>
+		<string>Columba</string>
+		<key>Nickname</key>
+		<string>Dove</string>
+		<key>Right Ascension</key>
+		<real>5.862610111</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>23.3057394</real>
+		<key>Name</key>
+		<string>Coma Berenices</string>
+		<key>Nickname</key>
+		<string>Bernice&apos;s Hair</string>
+		<key>Right Ascension</key>
+		<real>12.78778219</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-41.14745525</real>
+		<key>Name</key>
+		<string>Corona Australis</string>
+		<key>Nickname</key>
+		<string>Southern Crown</string>
+		<key>Right Ascension</key>
+		<real>18.64650346</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>32.6248884</real>
+		<key>Name</key>
+		<string>Corona Borealis</string>
+		<key>Nickname</key>
+		<string>Northern Crown</string>
+		<key>Right Ascension</key>
+		<real>15.84319071</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-18.43659165</real>
+		<key>Name</key>
+		<string>Corvus</string>
+		<key>Nickname</key>
+		<string>Crow</string>
+		<key>Right Ascension</key>
+		<real>12.44193935</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-15.92898705</real>
+		<key>Name</key>
+		<string>Crater</string>
+		<key>Nickname</key>
+		<string>Cup</string>
+		<key>Right Ascension</key>
+		<real>11.39580489</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-60.1864452</real>
+		<key>Name</key>
+		<string>Crux</string>
+		<key>Nickname</key>
+		<string>Southern Cross</string>
+		<key>Right Ascension</key>
+		<real>12.44985814</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>44.5450525</real>
+		<key>Name</key>
+		<string>Cyngus</string>
+		<key>Nickname</key>
+		<string>Swan</string>
+		<key>Right Ascension</key>
+		<real>20.58797075</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>11.67104695</real>
+		<key>Name</key>
+		<string>Delphinus</string>
+		<key>Nickname</key>
+		<string>Dolphin</string>
+		<key>Right Ascension</key>
+		<real>20.69357871</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-59.38705255</real>
+		<key>Name</key>
+		<string>Dorado</string>
+		<key>Nickname</key>
+		<string>Swordfish</string>
+		<key>Right Ascension</key>
+		<real>5.241867889</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
 		<real>22.6001697</real>
 		<key>Name</key>
 		<string>Gemini</string>
@@ -75,6 +325,16 @@
 		<string>Twins</string>
 		<key>Right Ascension</key>
 		<real>7.070612889</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-14.531826</real>
+		<key>Name</key>
+		<string>Hydra</string>
+		<key>Nickname</key>
+		<string>Female Water Snake</string>
+		<key>Right Ascension</key>
+		<real>11.61216494</real>
 	</dict>
 	<dict>
 		<key>Declination</key>
@@ -128,6 +388,216 @@
 	</dict>
 	<dict>
 		<key>Declination</key>
+		<real>-65.78154755</real>
+		<key>Name</key>
+		<string>Pavo</string>
+		<key>Nickname</key>
+		<string>Peacock</string>
+		<key>Right Ascension</key>
+		<real>19.6117649</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>19.46629895</real>
+		<key>Name</key>
+		<string>Pegasus</string>
+		<key>Nickname</key>
+		<string>Winged Horse</string>
+		<key>Right Ascension</key>
+		<real>22.69731425</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>45.0132427</real>
+		<key>Name</key>
+		<string>Perseus</string>
+		<key>Nickname</key>
+		<string>Hero</string>
+		<key>Right Ascension</key>
+		<real>3.174940708</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-48.5805874</real>
+		<key>Name</key>
+		<string>Phoenix</string>
+		<key>Nickname</key>
+		<string>Phoenix</string>
+		<key>Right Ascension</key>
+		<real>0.931890611</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-53.474123</real>
+		<key>Name</key>
+		<string>Pictor</string>
+		<key>Nickname</key>
+		<string>Painter&apos;s Easel</string>
+		<key>Right Ascension</key>
+		<real>5.70762875</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>13.68722055</real>
+		<key>Name</key>
+		<string>Pisces</string>
+		<key>Nickname</key>
+		<string>Fishes</string>
+		<key>Right Ascension</key>
+		<real>0.482888792</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-30.6421709</real>
+		<key>Name</key>
+		<string>Piscis Austrinus</string>
+		<key>Nickname</key>
+		<string>Southern Fish</string>
+		<key>Right Ascension</key>
+		<real>22.28450964</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-31.1773648</real>
+		<key>Name</key>
+		<string>Puppis</string>
+		<key>Nickname</key>
+		<string>Stern</string>
+		<key>Right Ascension</key>
+		<real>7.257956056</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-27.3507039</real>
+		<key>Name</key>
+		<string>Pyxis</string>
+		<key>Nickname</key>
+		<string>Mariner&apos;s Compass</string>
+		<key>Right Ascension</key>
+		<real>8.952737792000001</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-59.99750135</real>
+		<key>Name</key>
+		<string>Reticulum</string>
+		<key>Nickname</key>
+		<string>Reticle</string>
+		<key>Right Ascension</key>
+		<real>3.921240806</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>18.8613701</real>
+		<key>Name</key>
+		<string>Sagitta</string>
+		<key>Nickname</key>
+		<string>Arrow</string>
+		<key>Right Ascension</key>
+		<real>19.65086939</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-28.4768996</real>
+		<key>Name</key>
+		<string>Sagittarius</string>
+		<key>Nickname</key>
+		<string>Archer</string>
+		<key>Right Ascension</key>
+		<real>19.09898285</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-27.0314708</real>
+		<key>Name</key>
+		<string>Scorpius</string>
+		<key>Nickname</key>
+		<string>Scorpion</string>
+		<key>Right Ascension</key>
+		<real>16.88741158</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-32.08841225</real>
+		<key>Name</key>
+		<string>Sculptor</string>
+		<key>Nickname</key>
+		<string>Sculptor</string>
+		<key>Right Ascension</key>
+		<real>0.437995167</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-9.8886243</real>
+		<key>Name</key>
+		<string>Scutum</string>
+		<key>Nickname</key>
+		<string>Shield</string>
+		<key>Right Ascension</key>
+		<real>18.67309475</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-2.61468795</real>
+		<key>Name</key>
+		<string>Sextans</string>
+		<key>Nickname</key>
+		<string>Sextant</string>
+		<key>Right Ascension</key>
+		<real>10.27154306</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>14.8770861</real>
+		<key>Name</key>
+		<string>Taurus</string>
+		<key>Nickname</key>
+		<string>Bull</string>
+		<key>Right Ascension</key>
+		<real>4.702186194</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-51.03688715</real>
+		<key>Name</key>
+		<string>Telescopium</string>
+		<key>Nickname</key>
+		<string>Telescope</string>
+		<key>Right Ascension</key>
+		<real>19.32559396</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>31.47607705</real>
+		<key>Name</key>
+		<string>Triangulum</string>
+		<key>Nickname</key>
+		<string>Triangle</string>
+		<key>Right Ascension</key>
+		<real>2.184429597</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-65.3880005</real>
+		<key>Name</key>
+		<string>Triangulum Australe</string>
+		<key>Nickname</key>
+		<string>Southern Triangle</string>
+		<key>Right Ascension</key>
+		<real>16.08247708</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-65.82995415000001</real>
+		<key>Name</key>
+		<string>Tucana</string>
+		<key>Nickname</key>
+		<string>Toucan</string>
+		<key>Right Ascension</key>
+		<real>23.77733079</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
 		<real>50.7211685</real>
 		<key>Name</key>
 		<string>Ursa Major</string>
@@ -138,6 +608,26 @@
 	</dict>
 	<dict>
 		<key>Declination</key>
+		<real>77.03176879999999</real>
+		<key>Name</key>
+		<string>Ursa Minor</string>
+		<key>Nickname</key>
+		<string>Little Bear</string>
+		<key>Right Ascension</key>
+		<real>17.97770929</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-47.16724015</real>
+		<key>Name</key>
+		<string>Vela</string>
+		<key>Nickname</key>
+		<string>Sails</string>
+		<key>Right Ascension</key>
+		<real>9.577273403</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
 		<real>-4.1584239</real>
 		<key>Name</key>
 		<string>Virgo</string>
@@ -145,6 +635,26 @@
 		<string>Maiden</string>
 		<key>Right Ascension</key>
 		<real>13.40651036</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>-69.8012466</real>
+		<key>Name</key>
+		<string>Volans</string>
+		<key>Nickname</key>
+		<string>Flying Fish</string>
+		<key>Right Ascension</key>
+		<real>7.795514556</real>
+	</dict>
+	<dict>
+		<key>Declination</key>
+		<real>24.4427185</real>
+		<key>Name</key>
+		<string>Vulpecula</string>
+		<key>Nickname</key>
+		<string>Fox</string>
+		<key>Right Ascension</key>
+		<real>20.23130606</real>
 	</dict>
 </array>
 </plist>
